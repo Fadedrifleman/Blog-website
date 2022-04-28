@@ -50,6 +50,7 @@ app.get("/compose", (req,res) => {
 app.post("/compose", (req,res) => {
   const post = {
     title: req.body.postTitle,
+    kebabTitle: _.kebabCase(req.body.postTitle),
     content: req.body.postBody
   };
   posts.push(post);
@@ -57,9 +58,9 @@ app.post("/compose", (req,res) => {
 })
 
 app.get("/posts/:postName", (req,res) => {
-  let reqTitle = _.lowerCase(req.params.postName);
+  let reqTitle = _.kebabCase(req.params.postName);
   posts.forEach(post => {
-    if(_.lowerCase(post.title) === reqTitle) {
+    if(_.kebabCase(post.title) === reqTitle) {
       res.render("post", {
         postTitle: post.title,
         postBody: post.content
