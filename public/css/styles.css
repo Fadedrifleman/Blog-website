@@ -43,7 +43,8 @@
 }
 
 .allign-button {
-    position: absolute;
+    position: fixed;
+    z-index: 1000;
     right: 95px;
     bottom: 80px;
 }
