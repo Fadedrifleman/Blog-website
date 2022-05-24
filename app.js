@@ -59,7 +59,7 @@ app.post("/compose", function(req, res){
     }
   });
 });
-
+ 
 app.get("/posts/:postId", function(req, res){
   const requestedId = req.params.postId;
 
