@@ -12,7 +12,7 @@ const contactContent = "You can connect with me via email: fadedrifleman@gmail.c
 
 const app = express();
 
-mongoose.connect("mongodb+srv://admin-shivam:Test123@blogsite.euc3l.mongodb.net/Blog");
+mongoose.connect("mongodb+srv://admin-shivam:<password>@blogsite.euc3l.mongodb.net/Blog");
 
 app.set('view engine', 'ejs');
 
